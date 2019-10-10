@@ -9,40 +9,16 @@ namespace ConferenceTracker.TalkManagement
     public class Talk
     {
         /// <summary>
-        /// The topic of the talk
+        /// BGets the title.
         /// </summary>
         /// <value>The title.</value>
-        private readonly string _title;
-
-        /// <summary>
-        /// Gets the title.
-        /// </summary>
-        /// <value>The title.</value>
-        public string Title
-        {
-            get
-            {
-                return _title;
-            }
-        }
-
-        /// <summary>
-        /// The duration of the talk in minutes
-        /// </summary>
-        /// <value>The duration.</value>
-        private readonly int _duration;
+        public string Title { get; }
 
         /// <summary>
         /// Gets the duration.
         /// </summary>
         /// <value>The duration.</value>
-        public int Duration
-        {
-            get
-            {
-                return _duration;
-            }
-        }
+        public int Duration { get; }
 
         /// <summary>
         /// The start time of the talk
@@ -80,8 +56,8 @@ namespace ConferenceTracker.TalkManagement
                 throw new ArgumentException("The title of the talk is not valid.", "title");
             }
 
-            this._title = title;
-            this._duration = durationInMinutes;
+            this.Title = title;
+            this.Duration = durationInMinutes;
         }
 
         /// <summary>
